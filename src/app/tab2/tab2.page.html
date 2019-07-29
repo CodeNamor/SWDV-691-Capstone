@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Movie Reviews
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list>
+<ion-card>
+
+  <ion-item>
+    <h2>movie title will go here</h2>
+    <p>Release Date will go here</p>
+  </ion-item>
+
+  <img src="">
+
+  <ion-card-content>
+    <p>Movie poster and brief synopsis will go here. </p>
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>
