@@ -25,6 +25,7 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class ContactPage implements OnInit {
   private Contact : FormGroup;
+  submitted = false;
 
   constructor( private formBuilder: FormBuilder ) {
     this.Contact = this.formBuilder.group({
@@ -36,6 +37,8 @@ export class ContactPage implements OnInit {
   logForm(){
     console.log(this.Contact.value)
   }
+
+  onSubmit() { this.submitted = true; }
 
   ngOnInit() {
   }

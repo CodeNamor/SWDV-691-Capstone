@@ -9,6 +9,18 @@
   </ion-toolbar>
 </ion-header>
 
-<form [formgroup]="Contact">
-
-</form>
+  <form [formGroup]="Contact" (ngSubmit)="contactForm()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" formControlName="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" formControlName="Email"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+  </form>
