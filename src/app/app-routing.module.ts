@@ -9,6 +9,8 @@ const routes: Routes = [
   { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
   { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
   { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
+  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
 ];
  
 @NgModule({
