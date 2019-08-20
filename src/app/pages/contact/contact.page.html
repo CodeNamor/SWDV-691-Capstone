@@ -1,9 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Contact Us
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card-content>
 
+    <form (ngSubmit)="onSubmit()" padding-right [formGroup]="contactForm">
+    <!--Name of Submitter-->
+      <ion-item lines="inset">
+        <ion-label position="floating">Name</ion-label>
+        <ion-input  formControlName="name"></ion-input>
+      </ion-item>
+
+    <!--Email Address of Submitter-->
+      <ion-item lines="inset">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input  formControlName="email"></ion-input>
+      </ion-item>
+
+    <!--Message Content-->
+    <ion-item lines="inset">
+      <ion-label position="floating">What's on your mind?</ion-label>
+      <ion-input  formControlName="message"></ion-input>
+    </ion-item>
+
+    <!--Submit Button-->
+    <ion-item lines="none" class="ion-item-right-margin">
+      <ion-button size="default" slot="end" type="submit" (ngSubmit)="onSubmit()">Submit</ion-button>
+    </ion-item>
+    </form>
+  </ion-card-content>
 </ion-content>
