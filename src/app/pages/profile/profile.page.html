@@ -13,33 +13,106 @@
   <ion-card-content>
 
     <form (ngSubmit)="onSubmit()" padding-right [formGroup]="profileForm">
-    <!--Name of Submitter-->
-      <ion-item lines="inset">
-        <ion-label >Name</ion-label>
-        <ion-input  formControlName="name"></ion-input>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <!--Name of Submitter-->
+            <ion-item lines="inset">
+              <ion-label position="floating">Name</ion-label>
+              <ion-input  formControlName="name"></ion-input>
+            </ion-item>
+          </ion-col>
 
-      <!--Profile of Logged in User-->
-      <ion-item lines="inset">
-        <ion-label>ZipCode</ion-label>
-        <ion-input formControlName="zipcode"></ion-input>
-      </ion-item>
+          <ion-col>
+            <!--Profile of Logged in User-->
+            <ion-item lines="inset">
+              <ion-label position="floating">ZipCode</ion-label>
+              <ion-input formControlName="zipcode"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
 
-    <!--Email Address of Submitter-->
-      <ion-item lines="inset">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input  formControlName="email"></ion-input>
-      </ion-item>
+        <ion-row>
+          <ion-col>
+            <!--Email Address of Submitter-->
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input  formControlName="email"></ion-input>
+            </ion-item>
+          </ion-col>
 
-    <!--Preferred Theatre Content-->
-    <ion-item lines="inset">
-      <ion-label position="floating">Preferred Theatre</ion-label>
-      <ion-input formControlName="pTheatre"></ion-input>
-    </ion-item>
+          <ion-col>
+            <!--Radius for Movie Theatres-->
+            <ion-item>
+              <ion-label position="floating">Radius</ion-label>
+              <ion-input  formControlName="radius"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <!--Preferred Theatre Content-->
+            <ion-item lines="inset">
+              <ion-label position="floating">Preferred Theatre</ion-label>
+              <ion-input formControlName="pTheatre"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-list>
+              <ion-radio-group>
+                <ion-list-header>
+                  Movie Genres
+                </ion-list-header>
+                <ion-item>
+                  <ion-label>Action</ion-label>
+                  <ion-radio value="action"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Comedy</ion-label>
+                  <ion-radio value="comedy"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Documentary</ion-label>
+                  <ion-radio value="documentary"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Horror</ion-label>
+                  <ion-radio value="horror"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Romance</ion-label>
+                  <ion-radio value="romance"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Science Fiction</ion-label>
+                  <ion-radio value="Scyfy"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <!--Favorite Movie Content-->
+          <ion-item lines="inset">
+            <ion-label position="floating">Favorite Movies</ion-label>
+            <ion-input  formControlName="favMovie"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <!--Favorite Actor/Actress Content-->
+          <ion-item lines="inset">
+            <ion-label position="floating">Favorite Actor/Actress</ion-label>
+            <ion-input  formControlName="favAct"></ion-input>
+          </ion-item>
+        </ion-row>
+      </ion-grid>
 
     <!--Submit Button-->
     <ion-item lines="none" class="ion-item-right-margin">
-      <ion-button size="default" slot="end" type="submit" (ngSubmit)="onSubmit()">Submit</ion-button>
+      <ion-button size="default" slot="end" type="submit" >Submit</ion-button>
     </ion-item>
     </form>
   </ion-card-content>

@@ -16,10 +16,13 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-        name: [''],
+        name: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         zipcode: [''],
         email: [''],
-        pTheatre: ['']
+        pTheatre: [''],
+        radius: [''],
+        favMovie: [''],
+        favAct: ['']
     }, {});
 }
 
