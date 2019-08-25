@@ -1,7 +1,7 @@
 {
   "name": "scene-along",
   "engines": {
-    "node":"10.15.3"
+    "node": "10.15.3"
   },
   "version": "0.0.1",
   "author": "Ionic Framework",
@@ -16,8 +16,6 @@
   },
   "private": true,
   "dependencies": {
-    "@ionic/app-scripts": "2.1.4",
-    "typescript": "2.3.4",
     "@angular/common": "~8.1.2",
     "@angular/compiler": "~8.1.2",
     "@angular/core": "~8.1.2",
@@ -30,6 +28,7 @@
     "@ionic-native/sqlite": "^5.12.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.7.1",
+    "@ionic/app-scripts": "^2.1.4",
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "^2.2.0",
     "angular": "^1.7.8",
@@ -75,9 +74,9 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "^2.3.4"
   },
-  "description": "An Ionic project",
+  "description": "Maryville University Capston Project",
   "cordova": {
     "plugins": {
       "cordova-sqlite-storage": {},
