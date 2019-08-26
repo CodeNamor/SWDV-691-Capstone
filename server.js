@@ -4,9 +4,8 @@ var path = require('path');
 
 app.use(express.static(path.resolve(__dirname, "www")));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+app.use(express.static('home'))
+app.use(express.static('movies'))
 
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function() {
