@@ -12,7 +12,7 @@
 <ion-content>
   <ion-card-content>
 
-    <form padding-right [formGroup]="profileForm">
+    <form (ngSubmit)="onSubmit()" padding-right [formGroup]="profileForm">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -112,7 +112,7 @@
 
     <!--Submit Button-->
     <ion-item lines="none" class="ion-item-right-margin">
-      <ion-button size="default" slot="end" type="submit" >Submit</ion-button>
+      <ion-button size="default" slot="end" type="submit" (ngSubmit)="onSubmit()">Submit</ion-button>
     </ion-item>
     </form>
   </ion-card-content>

@@ -35,13 +35,23 @@ export class ProfilePage implements OnInit {
     }, {});
 }
 
-// Helper
-async showToast(msg) {
-  const toast = await this.toastController.create({
-    message: msg,
-    duration: 2000
+showToast() {
+  this.toastController.create({
+    message: 'Profile Saved.',
+    duration: 2000,
+    animated: true,
+    showCloseButton: true,
+    closeButtonText: "OK",
+    cssClass: "my-toast",
+    position: "middle"
+  }).then((obj) => {
+    obj.present();
   });
-  toast.present();
+}
+onSubmit() {
+  this.showToast()
+
+  this.profileForm.reset()
 }
 
 }
